@@ -13,6 +13,7 @@ btn_logout.onclick = async () => {
     method: "GET",
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });

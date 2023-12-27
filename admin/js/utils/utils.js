@@ -22,7 +22,7 @@ async function getLoggedUser() {
 }
 
 setRouter();
-const backendURL = "https://c473-216-247-59-145.ngrok-free.app/backend/public/";
+const backendURL = "https://bcc0-216-247-54-151.ngrok-free.app/backend/public";
 
 function successNotification(message, seconds) {
   document.querySelector(".alert-success").classList.remove("d-none");
