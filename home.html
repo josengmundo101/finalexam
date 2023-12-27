@@ -25,7 +25,7 @@
 
   <!-- Template Main CSS File -->
   <link href="css/style1.css" rel="stylesheet">
-
+  <script src="js/home.js" type="module"></script>
 </head>
 
 <body>
@@ -48,6 +48,9 @@
           <li><a href="instructor.html">Instructors</a></li>
           <li><a href="organizers.html">Organizers</a></li>
           <li><a href="blog.html">Exhibit</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="btn_logout">Logout</a>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -83,13 +86,42 @@
                 <div class="login-form">
                   <h2 class="text-center">Sign-up</h2>
 
-                  <form id="form_register">
-                    <div class="mb-3">
-                      <label for="firstName" class="form-label">Phone Number</label>
-                      <input type="text" class="form-control" name="artist_number" required placeholder="Enter your Phone number">
+                  <!-- Slides Form -->
+                  <form id="form_slides">
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                      <!-- User Id Field -->
+                      <!-- <input type="hidden" name="user_id" id="user_id" /> -->
+                      <!-- Slide Name Field -->
+                      <div class="row mb-3">
+                        <div class="col-sm-12">
+                          <input class="form-control" type="text" name="artist_number" id="artist_number" placeholder="Phone Number" required>
+                        </div>
+                      </div>
+                      <!-- Description Field -->
+                      <div class="row mb-3">
+                        <div class="col-sm-12">
+                          <input class="form-control" name="id" id="id" placeholder="Enter user ID" required>
+                        </div>
+                      </div>
                     </div>
-
-                    <button type="submit" class="btn btn-primary mb-2">Sign up</button>
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                      <button
+                        id="modal_close"
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button
+                        class="btn btn-primary w-25 d-flex align-items-center justify-content-center"
+                        type="submit"
+                      >
+                        Submit
+                      </button>
+                    </div>
                   </form>
                 </div>
               </div>
