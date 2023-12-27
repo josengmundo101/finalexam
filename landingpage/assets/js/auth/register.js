@@ -18,6 +18,7 @@ form_register.onsubmit = async (e) => {
     method: "POST",
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
     },
     body: formData,
   });

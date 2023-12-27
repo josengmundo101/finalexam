@@ -13,10 +13,11 @@ form_login.onsubmit = async (e) => {
 
   const formData = new FormData(form_login);
 
-  const response = await fetch(backendURL + "/api/login", {
+  const response = await fetch(backendURL + "api/login", {
     method: "POST",
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
     },
     body: formData,
   });
@@ -30,7 +31,7 @@ form_login.onsubmit = async (e) => {
 
     successNotification("Successfully logged in account", 5);
 
-    window.location.pathname = "/admin.html";
+    window.location.pathname = "/home.html";
   } else if (response.status == 422) {
     const json = await response.json();
 
