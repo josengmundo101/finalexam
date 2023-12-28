@@ -1231,3 +1231,8 @@ h6 {
   font-size: 13px;
   color: #012970;
 }
+
+.header-nav ul li a.active {
+  color: #4154f1; /* Change this to the color you want for the active link */
+  font-weight: bold; /* Adjust as needed */
+}

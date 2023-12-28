@@ -1,10 +1,14 @@
 import { setRouter } from "../router/router.js";
 
+setRouter();
+const backendURL = "https://4f3a-216-247-59-145.ngrok-free.app/backend/public/";
+
 async function getLoggedUser() {
-  const response = await fetch(backendURL + "/api/profile/show", {
+  const response = await fetch(backendURL + "api/profile/show", {
     method: "GET",
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });
@@ -12,17 +16,15 @@ async function getLoggedUser() {
   if (response.ok) {
     const json = await response.json();
 
-    document.getElementById("user_logged").innerHTML =
-      json.firstname + " " + json.lastname;
+    if (document.getElementById("id")) {
+      document.getElementById("id").value = json.id;
+    }
   } else {
     const json = await response.json();
 
     alert(json.message);
   }
 }
-
-setRouter();
-const backendURL = "https://c473-216-247-59-145.ngrok-free.app/backend/public/";
 
 function successNotification(message, seconds) {
   document.querySelector(".alert-success").classList.remove("d-none");

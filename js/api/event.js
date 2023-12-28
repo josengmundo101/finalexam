@@ -10,6 +10,7 @@ import {
     const response = await fetch(
       backendURL + "api/event",
       {
+        method: "GET",
         headers: {
           Accept: "application/json",
           "ngrok-skip-browser-warning": "69420",

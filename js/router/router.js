@@ -2,16 +2,16 @@ function setRouter() {
   //alert(window.location.pathname);
   switch (window.location.pathname) {
     case "/":
-    case "/home.html":
+    case "/landingpage.html":
     case "/index.html":
       if (localStorage.getItem("token") != null) {
-        window.location.pathname = "/admin.html";
+        window.location.pathname = "/home.html";
       }
       break;
 
-    case "/admin.html":
+    case "/home.html":
       if (!localStorage.getItem("token")) {
-        window.location.pathname = "/index.html";
+        window.location.pathname = "/landingpage.html";
       }
       break;
 

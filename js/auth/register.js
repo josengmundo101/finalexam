@@ -14,10 +14,11 @@ form_register.onsubmit = async (e) => {
 
   const formData = new FormData(form_register);
 
-  const response = await fetch(backendURL + "/api/user", {
+  const response = await fetch(backendURL + "api/user", {
     method: "POST",
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
     },
     body: formData,
   });
